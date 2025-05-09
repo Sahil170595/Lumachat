@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.chatapp.ai_chat_app.controller.RegisterController"
+            prefWidth="768" prefHeight="768"
+            styleClass="root">
+
+    <children>
+        <VBox alignment="CENTER" spacing="30" styleClass="vbox-form" maxWidth="360"
+              AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              style="-fx-padding: 60 20 20 20;">
+              
+            <!-- Icon-only Logo -->
+            <ImageView fx:id="logoView" fitWidth="360" preserveRatio="true" />
+            
+            <!-- Header -->
+            <Label text="Register New Account" styleClass="header"/>
+
+            <!-- Register Box -->
+            <VBox spacing="20" alignment="CENTER" maxWidth="360"
+                  style="-fx-background-color: rgba(15, 15, 15, 0.95);
+                         -fx-background-radius: 20;
+                         -fx-padding: 40;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 18, 0, 0, 6);">
+
+                <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="input-field"/>
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button text="Register" onAction="#handleRegister" styleClass="primary-btn"/>
+                    <Button text="Back to Login" onAction="#handleBackToLogin" styleClass="primary-btn"/>
+                </HBox>
+
+                <Label fx:id="errorLabel" styleClass="error-label"
+                       wrapText="true" alignment="CENTER" maxWidth="280"/>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>

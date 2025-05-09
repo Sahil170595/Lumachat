@@ -1,0 +1,186 @@
+/* Main Application Styles */
+.root {
+    -fx-background-color: #1E1E1E;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-text-fill: #EEEEEE;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    -fx-background-color: #252525;
+    -fx-padding: 10px; /* Added px */
+    -fx-min-width: 180px; /* Added px */
+    -fx-pref-width: 220px; /* Added px */
+}
+
+.section-header {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EEEEEE;
+    -fx-padding: 5px 0 5px 0; /* Added px */
+}
+
+.friends-list {
+    -fx-background-color: #2D2D2D;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.friends-list .list-cell {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #EEEEEE;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 5px 10px 10px; /* Added px */
+}
+
+.friends-list .list-cell:hover {
+    -fx-background-color: #3D3D3D;
+}
+
+.friends-list .list-cell:selected {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+}
+
+/* Chat Area Styles */
+.chat-header {
+    -fx-background-color: #252525;
+    -fx-border-width: 0px 0px 1px 0px; /* Added px */
+    -fx-border-color: #3D3D3D;
+}
+
+.chat-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #EEEEEE;
+}
+
+.chat-scroll {
+    -fx-background-color: #2D2D2D;
+    -fx-background: #2D2D2D;
+}
+
+.chat-scroll .viewport {
+    -fx-background-color: #2D2D2D;
+}
+
+.chat-container {
+    -fx-background-color: #2D2D2D;
+}
+
+/* Message Bubbles */
+.bubble {
+    -fx-padding: 8px;
+    -fx-background-radius: 10px;
+ /*   -fx-wrap-text: true; */
+    -fx-font-size: 14px;
+}
+
+/* For timestamp styling - this will be matched by Unicode chars in the code */
+.bubble Label {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bubble-left {
+    -fx-background-color: #3D3D3D;
+    -fx-text-fill: #EEEEEE;
+}
+
+.bubble-right {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+}
+
+.bubble.ai {
+    -fx-background-color: #9370DB; /* Purple color for AI messages */
+    -fx-text-fill: white;
+}
+
+/* Date Separator */
+.date-separator {
+    -fx-background-color: #3D3D3D;
+    -fx-text-fill: #CCCCCC;
+    -fx-padding: 4px 12px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* Input Area */
+.message-input-area {
+    -fx-background-color: #252525;
+    -fx-border-width: 1px 0px 0px 0px; /* Added px */
+    -fx-border-color: #3D3D3D;
+}
+
+TextField {
+    -fx-background-color: #3D3D3D;
+    -fx-text-fill: #EEEEEE;
+    -fx-prompt-text-fill: #999999;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+}
+
+/* Buttons */
+Button {
+    -fx-background-color: #4D4D4D;
+    -fx-text-fill: #EEEEEE;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: #5D5D5D;
+}
+
+.action-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-min-width: 35px; /* Added px */
+    -fx-max-width: 35px; /* Added px */
+    -fx-padding: 5px; /* Added px */
+}
+
+.profile-button {
+    -fx-background-color: #6D6D6D;
+}
+
+.send-button {
+    -fx-background-color: #0078D7;
+}
+
+.send-button:hover {
+    -fx-background-color: #0086F0;
+}
+
+.header {
+    -fx-font-size: 28px; /* Larger font size */
+    -fx-text-fill: #9370DB; /* Purple color to match theme */
+    -fx-font-weight: bold;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vbox-form {
+    -fx-background-color: rgba(15, 15, 15, 0.95);
+    -fx-background-radius: 20;
+    -fx-padding: 40;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 18, 0, 0, 6);
+}
+
+.timestamp {
+    -fx-font-size: 10px;
+    -fx-text-fill: #AAAAAA;
+    -fx-padding: 2 0 0 6;
+}
+.bubble.gemini {
+    -fx-background-color: linear-gradient(to right, #4285F4, #34A853); /* Google blue → green */
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+    -fx-background-radius: 10px;
+    -fx-padding: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0, 0, 2);
+}
+

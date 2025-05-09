@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.chatapp.ai_chat_app.controller.MainController"
+            prefHeight="600.0" prefWidth="800.0"
+            stylesheets="@../css/dark-theme.css">
+    <left>
+        <VBox spacing="10" styleClass="sidebar">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Friends" styleClass="section-header"/>
+            <ListView fx:id="friendsList" VBox.vgrow="ALWAYS" styleClass="friends-list"/>
+            
+            <VBox spacing="5" styleClass="add-friend-section">
+                <Label text="Manage Friends:" styleClass="section-header"/>
+                <HBox spacing="5">
+                    <TextField fx:id="friendInputField" promptText="Enter username" HBox.hgrow="ALWAYS"/>
+                    <Button text="+" onAction="#handleAddFriend" styleClass="action-button"/>
+                    <Button text="-" onAction="#handleRemoveFriend" styleClass="action-button"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </left>
+    
+    <center>
+        <BorderPane>
+            <top>
+                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="chat-header">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <Label fx:id="chatTitle" text="Select a friend to chat" styleClass="chat-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Profile" onAction="#handleOpenProfile" styleClass="profile-button"/>
+                </HBox>
+            </top>
+            
+            <center>
+                <ScrollPane fx:id="chatScrollPane" fitToWidth="true" fitToHeight="false" styleClass="chat-scroll">
+                    <VBox fx:id="chatContainer" spacing="10" styleClass="chat-container">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </center>
+            
+            <bottom>
+                <HBox spacing="10" alignment="CENTER_LEFT" styleClass="message-input-area">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <TextField fx:id="inputField" promptText="Type your message here..." HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="sendButton" text="Send" onAction="#handleSend" styleClass="send-button"/>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>

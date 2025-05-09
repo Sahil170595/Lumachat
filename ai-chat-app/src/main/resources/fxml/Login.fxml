@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.chatapp.ai_chat_app.controller.LoginController"
+            prefWidth="768" prefHeight="768"
+            style="-fx-background-color: #0B0713;">
+
+    <children>
+        <VBox spacing="30" alignment="CENTER" styleClass="vbox-form" maxWidth="360"
+              AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              style="-fx-padding: 60 20 20 20;">
+
+            <!-- Icon-only Logo -->
+            <ImageView fx:id="logoView" fitWidth="360" preserveRatio="true" />
+
+            <!-- Welcome Text -->
+            <Label text="Welcome to LumaChat" styleClass="header" />
+
+            <!-- Login Box -->
+            <VBox spacing="30" alignment="CENTER" maxWidth="360"
+                  style="-fx-background-color: rgba(15, 15, 15, 0.95);
+                         -fx-background-radius: 20;
+                         -fx-padding: 40;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 18, 0, 0, 6);">
+
+                <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" />
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" />
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button text="Login" onAction="#handleLogin" styleClass="primary-btn" />
+                    <Button text="Register" onAction="#handleRegisterRedirect" styleClass="primary-btn" />
+                </HBox>
+
+                <Label fx:id="messageLabel" styleClass="error-label"
+                       wrapText="true" alignment="CENTER" maxWidth="300"/>
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>
