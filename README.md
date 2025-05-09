@@ -21,7 +21,14 @@ LumaChat is a modern, AI-enhanced desktop chat application built using JavaFX an
 
 > Login, registration, chat with Gemini, styled assistant bubbles, and friend list.
 
-*(Add images or a `screenshots/` folder and link here)*
+Login:
+![image](https://github.com/user-attachments/assets/e0f84150-ee85-40b9-910f-825705a4e583)
+
+Chat with LocalAI:
+![image](https://github.com/user-attachments/assets/3d260531-5d98-4424-85a1-8e6b3c06091b)
+
+#Chat with Gemini:
+![image](https://github.com/user-attachments/assets/1ae9ab79-503b-47bc-99bf-da84802d8334)
 
 ---
 
